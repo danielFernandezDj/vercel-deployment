@@ -1,10 +1,8 @@
 // DEPENDENCIES
-require('dotenv').config()
 const express = require('express')
 const app = express()
-
-// PORT CONFIGURATION
-const PORT = process.env.PORT || 3000
+require('dotenv').config()
+const PORT = process.env.PORT
 
 // ROUTS
 app.get('/', (req, res) => {
@@ -12,7 +10,7 @@ app.get('/', (req, res) => {
 })
 
 app.listen(PORT, () => {
-    console.log(`Example app listening on port ${PORT}`)
+    console.log(`Server is running in port ${PORT}`)
 })
 
 module.exports = app
